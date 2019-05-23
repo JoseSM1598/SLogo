@@ -1,0 +1,152 @@
+/**
+ *
+ * @author Vincent Liu
+ * @author Ben Xu
+ */
+
+.slider {
+    -fx-text-fill: #c9c9c9;
+    -fx-tick-label-fill: #c9c9c9;
+}
+
+.slider .axis {
+    -fx-tick-label-fill: #c9c9c9;
+}
+
+.check-box {
+    -fx-tick-label-fill: #c9c9c9;
+    -fx-text-fill: #c9c9c9;
+}
+
+.combo-box-base {
+    -fx-background: #2b2b2b;
+    -fx-background-color: #2b2b2b;
+    -fx-background-radius: 5, 5, 4, 3;
+    -fx-background-insets: 0 0 -1 0, 0, 1, 2;
+    -fx-padding: 0;
+}
+
+.combo-box-popup .list-view {
+    -fx-background-color: white, white;
+}
+
+.combo-box-popup .list-view .list-cell:filled:selected, .combo-box-popup .list-view .list-cell:filled:selected:hover {
+    -fx-background: -fx-accent;
+    -fx-background-color: -fx-selection-bar;
+    -fx-text-fill: -fx-selection-bar-text;
+}
+
+.combo-box-popup .list-view .list-cell:filled:hover {
+    -fx-background-color: white;
+    -fx-text-fill: -fx-text-inner-color;
+}
+
+.combo-box .list-cell {
+    -fx-background-color: #2b2b2b;
+    -fx-text-fill: #c9c9c9;
+}
+
+.combo-box .arrow {
+    -fx-background-color: #c9c9c9;
+}
+
+.label {
+    -fx-text-fill: #c9c9c9;
+}
+
+.root {
+    -fx-padding: 0;
+}
+
+.button {
+    -fx-text-fill: #c9c9c9;
+    -fx-font-family: "Arial";
+    /*-fx-font-weight: bold;*/
+    -fx-background-color: #2b2b2b;
+    -fx-border-color: transparent;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+.tab-header-area {
+    -fx-padding: 0 0 0 0;
+}
+
+.tab-pane {
+    -fx-padding: 0;
+}
+
+.button:hover {
+    -fx-background-color: #6b7175;
+    -fx-border-color: #5e6060;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+.gridPane {
+    -fx-background-color: #3c3f41;
+    -fx-padding: 5;
+    -fx-hgap: 10;
+    -fx-vgap: 10;
+    -fx-background-radius: 5.0;
+    -fx-font-family: "Arial";
+}
+
+.commandView {
+    -fx-border-color: black;
+    -fx-border-width: 1px;
+}
+
+.displayView {
+    -fx-border-color: black;
+    -fx-border-width: 1px;
+}
+
+.turtleBox {
+    -fx-border-color: black;
+    -fx-border-width: 1px;
+}
+
+.functionView {
+    -fx-border-color: black;
+    -fx-border-width: 1px;
+}
+
+.variableView {
+    -fx-border-color: black;
+    -fx-border-width: 1px;
+}
+
+.historyView {
+    -fx-border-color: black;
+    -fx-border-width: 1px;
+}
+
+.settingView {
+    -fx-border-color: black;
+    -fx-border-width: 1px;
+}
+
+.stateView {
+    -fx-border-color: black;
+    -fx-border-width: 1px;
+}
+
+.tool-bar {
+    -fx-alignment: CENTER;
+    -fx-background-color: #3c3f41;
+    -fx-border-color: #4b4b4b;
+    -fx-text-fill: white;
+    -fx-padding: 0;
+}
+
+.helpView {
+    -fx-border-color: black;
+    -fx-border-width: 1px;
+}
+
+.buttonBox {
+    -fx-hgap: 4px;
+    -fx-vgap: 4px;
+    -fx-padding: 1px;
+}

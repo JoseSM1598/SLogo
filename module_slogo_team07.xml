@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_slogo_team07" default="compile.module.slogo_team07">
+  <dirname property="module.slogo_team07.basedir" file="${ant.file.module_slogo_team07}"/>
+  
+  <property name="module.jdk.home.slogo_team07" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.slogo_team07" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.slogo_team07" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.slogo_team07" value="-encoding UTF-8 -source 12 -target 12 ${compiler.args}"/>
+  
+  <property name="slogo_team07.output.dir" value="${module.slogo_team07.basedir}/out/production/slogo_team07"/>
+  <property name="slogo_team07.testoutput.dir" value="${module.slogo_team07.basedir}/out/test/slogo_team07"/>
+  
+  <path id="slogo_team07.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="slogo_team07.module.production.classpath">
+    <path refid="${module.jdk.classpath.slogo_team07}"/>
+  </path>
+  
+  <path id="slogo_team07.runtime.production.module.classpath">
+    <pathelement location="${slogo_team07.output.dir}"/>
+  </path>
+  
+  <path id="slogo_team07.module.classpath">
+    <path refid="${module.jdk.classpath.slogo_team07}"/>
+    <pathelement location="${slogo_team07.output.dir}"/>
+  </path>
+  
+  <path id="slogo_team07.runtime.module.classpath">
+    <pathelement location="${slogo_team07.testoutput.dir}"/>
+    <pathelement location="${slogo_team07.output.dir}"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.slogo_team07">
+    <patternset refid="ignored.files"/>
+    <exclude name="BackEnd/**"/>
+    <exclude name="BackEnd/src/**"/>
+    <exclude name="BackEnd/src/backend/**"/>
+    <exclude name="BackEnd/src/backend/Storage/**"/>
+    <exclude name="BackEnd/src/backend/Testing/**"/>
+    <exclude name="BackEnd/src/backend/Commands/**"/>
+    <exclude name="BackEnd/src/backend/resources/**"/>
+    <exclude name="FrontEnd/**"/>
+    <exclude name="FrontEnd/src/**"/>
+    <exclude name="FrontEnd/src/main/**"/>
+    <exclude name="FrontEnd/src/frontend/**"/>
+    <exclude name="FrontEnd/src/frontend/API/**"/>
+    <exclude name="FrontEnd/src/frontend/GUI/**"/>
+    <exclude name="FrontEnd/src/frontend/GUI/Display/**"/>
+    <exclude name="FrontEnd/src/frontend/GUI/SubViews/**"/>
+    <exclude name="FrontEnd/src/frontend/Undo/**"/>
+    <exclude name="FrontEnd/src/frontend/Util/**"/>
+    <exclude name="FrontEnd/src/frontend/ExternalAPI/**"/>
+    <exclude name="FrontEnd/resources/**"/>
+    <exclude name="FrontEnd/resources/languages/**"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.slogo_team07">
+    <patternset refid="excluded.from.module.slogo_team07"/>
+  </patternset>
+  
+  <path id="slogo_team07.module.sourcepath">
+    <dirset dir="${module.slogo_team07.basedir}">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.slogo_team07" depends="compile.module.slogo_team07.production,compile.module.slogo_team07.tests" description="Compile module slogo_team07"/>
+  
+  <target name="compile.module.slogo_team07.production" depends="register.custom.compilers" description="Compile module slogo_team07; production classes">
+    <mkdir dir="${slogo_team07.output.dir}"/>
+    <javac2 destdir="${slogo_team07.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.slogo_team07}/javac">
+      <compilerarg line="${compiler.args.slogo_team07}"/>
+      <bootclasspath refid="slogo_team07.module.bootclasspath"/>
+      <classpath refid="slogo_team07.module.production.classpath"/>
+      <src refid="slogo_team07.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.slogo_team07"/>
+    </javac2>
+    
+    <copy todir="${slogo_team07.output.dir}">
+      <fileset dir="${module.slogo_team07.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.slogo_team07.tests" depends="register.custom.compilers,compile.module.slogo_team07.production" description="compile module slogo_team07; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.slogo_team07" description="cleanup module">
+    <delete dir="${slogo_team07.output.dir}"/>
+    <delete dir="${slogo_team07.testoutput.dir}"/>
+  </target>
+</project>
