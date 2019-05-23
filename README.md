@@ -60,3 +60,6 @@ A development environment that helps users write SLogo programs.
     * When the mouse is hovering above the turtle, it displays the state of the turtle
     * Multiple tabs can operate at the same time without affecting each other
     * Accordion is used for displaying variable and functions. It makes the tables strechable.
+=======
+# SLogo
+>>>>>>> 88b1577b28cc14d6c3036f05ad478a9b036bf316
